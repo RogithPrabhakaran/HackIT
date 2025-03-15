@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Signup from './components/signup';
 import Login from './components/login';
+import MoodTrackerGraph from './components/moodTrackerGraph';
 
 const Navbar = () => {
   return (
@@ -10,6 +11,7 @@ const Navbar = () => {
       <div>
         <Link to="/signup" className="mr-4 hover:underline">Signup</Link>
         <Link to="/login" className="hover:underline">Login</Link>
+        <Link to="/" className="ml-4 hover:underline">Home</Link>
       </div>
     </nav>
   );
@@ -24,7 +26,7 @@ const App = () => {
           <Routes>
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/" element={<h2>Welcome to the Addiction Recovery App</h2>} />
+            <Route path="/" element={<MoodTrackerGraph/>} />
           </Routes>
         </div>
       </div>
