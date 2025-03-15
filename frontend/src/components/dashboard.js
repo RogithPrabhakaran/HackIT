@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import MoodTrackerGraph from './moodTrackerGraph';
 
 const RecoveryProgress = () => {
   const [progressData, setProgressData] = useState([]);
@@ -80,8 +81,9 @@ const RecoveryProgress = () => {
             <p><strong>User ID:</strong> {dummyUser.UserID}</p>
           </div>
         </div>
-
+        <MoodTrackerGraph/>    
         {/* Summary Card */}
+        <br></br>
         <div className="bg-white p-6 rounded-xl shadow-lg mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-blue-700">Summary</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -114,6 +116,7 @@ const RecoveryProgress = () => {
           ))}
         </div>
       </div>
+      
     </div>
   );
 };
