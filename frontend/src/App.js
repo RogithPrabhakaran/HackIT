@@ -2,23 +2,40 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Signup from './components/signup';
 import Login from './components/login';
+
+import MoodTrackerGraph from './components/moodTrackerGraph';
 import ChatRoom from './components/chatRoom';
 import Chatting from './components/chatting';
 import DashBoard from './components/dashboard';
+
 import Resource from './components/resource';
 import Campaigns from './components/campains';
+
+
+
+
 const Navbar = () => {
   return (
     <nav className="bg-blue-600 text-white p-4 flex justify-between items-center shadow-lg">
       <h1 className="text-2xl font-bold">Addiction Recovery App</h1>
+
+      
       <div className="space-x-4">
+
       <Link to="/login" className="hover:underline hover:text-blue-200 transition duration-300">Login</Link>
+
+        
+
         <Link to="/signup" className="hover:underline hover:text-blue-200 transition duration-300">Signup</Link>
         <Link to="/dashboard" className="hover:underline hover:text-blue-200 transition duration-300"> DashBoard</Link>
+
         
         <Link to="/community-chat" className="hover:underline hover:text-blue-200 transition duration-300">ChatRoom</Link>
         <Link to="/community-resource" className="hover:underline hover:text-blue-200 transition duration-300">Resources</Link>
         <Link to="/campaingns-make" className="hover:underline hover:text-blue-200 transition duration-300"> Campaigns </Link>
+
+
+
       </div>
     </nav>
   );
@@ -33,6 +50,7 @@ const App = () => {
           <Routes>
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+
             <Route path="/community-chat" element={<ChatRoom />} />
             <Route path="/chatroom/:roomID" element={<Chatting />} />
             <Route path="/dashboard" element={<DashBoard />} />
@@ -47,6 +65,7 @@ const App = () => {
                 </div>
               }
             />
+
           </Routes>
         </div>
       </div>
