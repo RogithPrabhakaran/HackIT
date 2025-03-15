@@ -7,33 +7,59 @@ const ChatroomPage = () => {
   const [languageFilter, setLanguageFilter] = useState('');
   const navigate = useNavigate();
 
-  // Dummy data for addiction recovery chatrooms
-  const dummyChatrooms = [
-    {
-      RoomID: 1,
-      RoomName: 'Daily Support Group',
-      Description: 'A safe space for daily check-ins and mutual support.',
-      Location: 'Online',
-      Language: 'English',
-      CreatedAt: '2023-09-01 10:00:00',
-    },
-    {
-      RoomID: 2,
-      RoomName: 'Sobriety Milestones',
-      Description: 'Celebrate and discuss key milestones in your sobriety journey.',
-      Location: 'Remote',
-      Language: 'English',
-      CreatedAt: '2023-09-05 14:30:00',
-    },
-    {
-      RoomID: 3,
-      RoomName: 'Family & Friends Support',
-      Description: 'A place for loved ones to share and find guidance.',
-      Location: 'Online',
-      Language: 'Spanish',
-      CreatedAt: '2023-09-10 16:00:00',
-    },
-  ];
+ // Dummy data for addiction recovery chatrooms
+const dummyChatrooms = [
+  {
+    RoomID: 1,
+    RoomName: 'Daily Support Group',
+    Description: 'A safe space for daily check-ins and mutual support.',
+    Location: 'Online',
+    Language: 'English',
+    CreatedAt: '2023-09-01 10:00:00',
+  },
+  {
+    RoomID: 2,
+    RoomName: 'Sobriety Milestones',
+    Description: 'Celebrate and discuss key milestones in your sobriety journey.',
+    Location: 'Remote',
+    Language: 'English',
+    CreatedAt: '2023-09-05 14:30:00',
+  },
+  {
+    RoomID: 3,
+    RoomName: 'Family & Friends Support',
+    Description: 'A place for loved ones to share and find guidance.',
+    Location: 'Online',
+    Language: 'Spanish',
+    CreatedAt: '2023-09-10 16:00:00',
+  },
+  // Additional chatrooms
+  {
+    RoomID: 4,
+    RoomName: 'Teen Recovery Circle',
+    Description: 'Support for teenagers navigating addiction recovery.',
+    Location: 'Hybrid',
+    Language: 'English',
+    CreatedAt: '2023-09-15 12:00:00',
+  },
+  {
+    RoomID: 5,
+    RoomName: 'Mindfulness & Meditation',
+    Description: 'Guided mindfulness practices for stress management.',
+    Location: 'Online',
+    Language: 'French',
+    CreatedAt: '2023-09-20 09:00:00',
+  },
+  {
+    RoomID: 6,
+    RoomName: 'Relapse Prevention',
+    Description: 'Strategies and support to prevent relapse.',
+    Location: 'In-Person',
+    Language: 'English',
+    CreatedAt: '2023-09-25 18:00:00',
+  },
+];
+
 
   useEffect(() => {
     // Simulate fetching data
