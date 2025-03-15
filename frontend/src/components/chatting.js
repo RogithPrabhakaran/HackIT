@@ -11,7 +11,20 @@ const ChatPage = () => {
     { MessageID: 1, RoomID: 1, User: 'Alice', Content: 'Hello, everyone!', Timestamp: '2023-09-10 09:00:00' },
     { MessageID: 2, RoomID: 1, User: 'Bob', Content: 'How do you stay focused on sobriety?', Timestamp: '2023-09-10 09:15:00' },
     { MessageID: 3, RoomID: 2, User: 'Eve', Content: 'Celebrating 1 year sober today!', Timestamp: '2023-09-12 18:30:00' },
+    
+    // Additional messages
+    { MessageID: 4, RoomID: 1, User: 'Charlie', Content: 'Meditation really helps me.', Timestamp: '2023-09-10 09:45:00' },
+    { MessageID: 5, RoomID: 2, User: 'Dave', Content: 'Congrats, Eve! That’s amazing.', Timestamp: '2023-09-12 18:45:00' },
+    { MessageID: 6, RoomID: 3, User: 'Sophia', Content: 'How do I support my partner?', Timestamp: '2023-09-13 10:00:00' },
+    { MessageID: 7, RoomID: 3, User: 'Liam', Content: 'Patience and open communication help a lot.', Timestamp: '2023-09-13 10:15:00' },
+    { MessageID: 8, RoomID: 4, User: 'Mia', Content: 'Any other teens here?', Timestamp: '2023-09-15 12:30:00' },
+    { MessageID: 9, RoomID: 4, User: 'Noah', Content: 'I’m here! Let’s connect.', Timestamp: '2023-09-15 12:45:00' },
+    { MessageID: 10, RoomID: 5, User: 'Isabella', Content: 'Mindfulness has changed my life.', Timestamp: '2023-09-20 09:30:00' },
+    { MessageID: 11, RoomID: 5, User: 'James', Content: 'Any tips on starting meditation?', Timestamp: '2023-09-20 09:45:00' },
+    { MessageID: 12, RoomID: 1, User: 'Amelia', Content: 'What are your best relapse prevention tips?', Timestamp: '2023-09-25 18:15:00' },
+    { MessageID: 13, RoomID: 1, User: 'Oliver', Content: 'Staying connected with others helps a lot.', Timestamp: '2023-09-25 18:30:00' },
   ];
+  
 
   useEffect(() => {
     const roomMessages = dummyMessages.filter((msg) => msg.RoomID === parseInt(roomID));

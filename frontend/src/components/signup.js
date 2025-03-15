@@ -58,18 +58,22 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Signup</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100">
+      <div className="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md">
+        <h2 className="text-3xl font-bold mb-8 text-center text-blue-800">Signup</h2>
+
+        {/* Error Message */}
         {error && (
-          <div className="mb-4 p-2 bg-red-100 border border-red-400 text-red-700 rounded">
+          <div className="mb-6 p-3 bg-red-50 border border-red-200 text-red-700 rounded-lg text-sm">
             {error}
           </div>
         )}
-        <form onSubmit={handleSubmit}>
+
+        {/* Signup Form */}
+        <form onSubmit={handleSubmit} className="space-y-6">
           {['name', 'email', 'phone', 'password'].map((field) => (
-            <div key={field} className="mb-4">
-              <label className="block text-sm font-medium text-gray-700">
+            <div key={field}>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 {field.charAt(0).toUpperCase() + field.slice(1)}
               </label>
               <input
@@ -78,19 +82,21 @@ const Signup = () => {
                 value={formData[field]}
                 onChange={handleChange}
                 required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+                placeholder={`Enter your ${field}`}
               />
             </div>
           ))}
 
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">Role</label>
+          {/* Role Dropdown */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">Role</label>
             <select
               name="role"
               value={formData.role}
               onChange={handleChange}
               required
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
             >
               <option value="Patient">Patient</option>
               <option value="Caregiver">Caregiver</option>
@@ -98,13 +104,22 @@ const Signup = () => {
             </select>
           </div>
 
+          {/* Signup Button */}
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300"
           >
             Signup
           </button>
         </form>
+
+        {/* Optional: Login Link */}
+        <p className="mt-6 text-center text-sm text-gray-600">
+          Already have an account?{' '}
+          <a href="/login" className="text-blue-600 hover:underline">
+            Login
+          </a>
+        </p>
       </div>
     </div>
   );
